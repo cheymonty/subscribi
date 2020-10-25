@@ -162,7 +162,7 @@ const Home = () => {
                     </DialogContentText>
                 
 
-                <TextField id="textfield" label="Subscription Name" onBlur={newSub} style={{marginRight: 20}}  />
+                <TextField id="textfield" label="Subscription Name" autoComplete="off" onBlur={newSub} style={{marginRight: 20}}  />
                 
                 <TextField
                     id="startDay"
