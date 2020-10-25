@@ -1,5 +1,6 @@
 # subscribi
+A React website that holds information and the deadline for all your subscriptions, in case you've ever forgot a deadline and had to pay for another cycle!
+Created  in 24 hours during Technica 2020.
 
-React website created during Technica 2020!
-
-[![](http://img.youtube.com/vi/aIPIbtC2-Mk/0.jpg)](http://www.youtube.com/watch?v=aIPIbtC2-Mk "See Subscribi in action!")
+Check it out here
+cheymonty.github.io/subscribi
