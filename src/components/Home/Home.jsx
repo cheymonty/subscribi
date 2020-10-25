@@ -38,7 +38,7 @@ const Home = () => {
     let year = state.endDay.slice(0,4)
     let month = parseInt(state.endDay.slice(5, 7)) - 1
     let day = state.endDay.slice(8,10)
-    console.log(day)
+    
     month = new Date(year, month, day).toLocaleString('default', { month: 'long'});
   
 
