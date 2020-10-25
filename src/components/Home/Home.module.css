@@ -1,9 +1,14 @@
 .container { 
     text-align: center;
-    overflow: hidden;
+   
 }
 
 body {
     color: #202020;
     background-color: aliceblue;
+}
+
+
+.innerContainer {
+    height: 500;
 }
