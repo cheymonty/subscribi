@@ -76,7 +76,7 @@ const Home = () => {
   }
 
  function newSub(evt) {
-    console.log("added")
+   
 
      const value = evt.target.value;
    
