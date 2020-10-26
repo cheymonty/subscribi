@@ -6,12 +6,12 @@ Check it out here
 [Subscribi](https://cheymonty.github.io/subscribi)
 
 # Features
-Utilizes LocalStorage
-Delete button
-If a subscription is included as a preset it will get the company logo, if not a generic google calendar logo is used
+* Utilizes LocalStorage
+* Delete button
+* If a subscription is included as a preset it will get the company logo, if not a generic google calendar logo is used
 
 # Coming soon
-Google sign-in
-Firebase storage
-Edit button
-Total up how much money spent on all subscriptions
+* Google sign-in
+* Firebase storage
+* Edit button
+* Total up how much money spent on all subscriptions
