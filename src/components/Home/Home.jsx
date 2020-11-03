@@ -45,9 +45,10 @@ const Home = () => {
     let temp;
 
     let fin = `${month} ${day}, ${year}`
-    preselects.forEach(function (item) {
-        if (state.subscriptionName.toLowerCase() === item.name) 
-            temp = {name: state.subscriptionName, startDay: state.startDay, endDay: fin, color: item.color}  
+
+    preselects.forEach(function (preset) {
+        if (state.subscriptionName.toLowerCase() === preset.name) 
+            temp = {name: state.subscriptionName, startDay: state.startDay, endDay: fin, color: preset.color}  
     
     })
 
@@ -79,6 +80,7 @@ const Home = () => {
    
 
      const value = evt.target.value;
+     
    
      switch(evt.target.id) {
         case 'startDay':
@@ -117,18 +119,17 @@ const Home = () => {
          
   };
 
-  function deleteSub(name) {
-    console.log(name)
+  function deleteSub(index) {
     
     let subs = JSON.parse(localStorage.getItem("subs")) 
     
     if (subs) {
        
-        subs = subs.filter(function(value, i) {
-            return value.name.toLowerCase() !== name
+        subs = subs.filter(function(_, i) {
+            return i !== index
         })
         
-
+        
         localStorage.setItem("subs", JSON.stringify(subs))
 
 
@@ -191,7 +192,7 @@ const Home = () => {
             </Dialog>
 
                 <Grid container direction="row" spacing={5}  style={{marginLeft: 40, marginRight: 40}}>   
-                {state.subscriptions.map((sub) => 
+                {state.subscriptions.map((sub, i) => 
                
                 <Card style={{maxWidth: 275, margin: 20}}>
                    
@@ -201,7 +202,7 @@ const Home = () => {
                             <Typography>{sub.name}</Typography>
                             <Typography>{sub.endDay}</Typography>
                          
-                            <IconButton onClick={_ => deleteSub(sub.name.toLowerCase())}>
+                            <IconButton onClick={_ => deleteSub(i)}>
                                 <DeleteIcon fontSize="small" style={{color: sub.color}} />
                             </IconButton>  
                             

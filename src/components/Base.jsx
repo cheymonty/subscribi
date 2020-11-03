@@ -39,16 +39,15 @@ function today() {
 
 
 function getLogo(name) {
-    let val;
+    let logo;
+
     preselects.forEach(function (item) {
-      
         if (name === item.name)   
-          val = item.logo  
-    
+          logo = item.logo  
     })
 
-    if (val)
-        return val;
+    if (logo)
+        return logo;
     
     return <SiGooglecalendar/>
 }
