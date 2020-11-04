@@ -46,6 +46,8 @@ const Home = () => {
 
     let fin = `${month} ${day}, ${year}`
 
+
+    // Goes through presets and checks for a match
     preselects.forEach(function (preset) {
         if (state.subscriptionName.toLowerCase() === preset.name) 
             temp = {name: state.subscriptionName, startDay: state.startDay, endDay: fin, color: preset.color}  
@@ -81,6 +83,10 @@ const Home = () => {
 
      const value = evt.target.value;
      
+    //  This syntax didnt work for some reason
+    //  setState({
+    //      [evt.target.id]: value
+    //  })
    
      switch(evt.target.id) {
         case 'startDay':
@@ -214,8 +220,7 @@ const Home = () => {
 
                 )} 
                 
-                
-
+            
                 </Grid>         
                       
                 

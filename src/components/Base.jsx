@@ -33,8 +33,7 @@ function today() {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); 
     var yyyy = today.getFullYear(); 
 
-    
-    return yyyy + "-" + mm + "-" + dd;
+    return `${yyyy}-${mm}-${dd}`
 }
 
 
